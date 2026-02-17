@@ -1,21 +1,16 @@
 def main():
     problem = input("What's your math problem? ")
     x, y, z = problem.split(" ")
-
-
-def x(n):
-    n = float(n)
-    return n
-
-
-def y(l):
-    l = float(l)
-    return l
-
-
-def z(c):
-    c = float(c)
-    return c
+    x = float(x)
+    z = float(z)
+    if y == "/":
+        print(x / z)
+    elif y == "*" or y == "x":
+        print(x * z)
+    elif y == "-":
+        print(x - z)
+    else:
+        print(x + z)
 
 
 main()
