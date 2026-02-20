@@ -1,4 +1,12 @@
-crewmates
+crewmates = [
+    {"name": "Nami", "Crew": "Straw Hats", "Symbol": "Tangerines"},
+    {"name": "Luffy", "Crew": "Straw Hats", "Symbol": "Straw Hat"},
+    {"name": "Zoro", "Crew": "Straw Hats", "Symbol": "Swords"},
+    {"name": "Shanks", "Crew": "Red Hair Pirates", "Symbol": "Red hair"},
+]
+
+for crewmate in crewmates:
+    print(crewmate["name"], crewmate["Crew"], crewmate["Symbol"], sep=", ")
 
 
 # crewmates = {
