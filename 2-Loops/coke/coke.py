@@ -18,7 +18,7 @@ def get_money():
             print("Invalid coin type")
         if money > 0:
             print("Amount owed:", money)
-    if money < 0:
+    if money <= 0:
         money = abs(money)
         print("Change Owed:", money)
 
