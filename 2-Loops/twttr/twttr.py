@@ -1,2 +1,15 @@
-twtter = input("What's your message? ").casefold
+twtter = input("What's your message? ")
+for c in twtter:
+    c = c.replace("a", "")
+    c = c.replace("e", "")
+    c = c.replace("i", "")
+    c = c.replace("o", "")
+    c = c.replace("u", "")
+    c = c.replace("A", "")
+    c = c.replace("E", "")
+    c = c.replace("I", "")
+    c = c.replace("O", "")
+    c = c.replace("U", "")
+    print(c, end="")
 
+print()
