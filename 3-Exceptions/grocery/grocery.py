@@ -1,8 +1,14 @@
-d = [key]
+items = []
 while True:
     try:
-        list = input("Add to your list: ")
-        d[key] = d.get(list, 0) + 1
+        item = input("Add to your list: ")
+        if item:
+            if item in items:
+                items[count] += 1
+            else:
+                items[count] = 1
     except EOFError:
+        print()
         break
-print(d)
+for item, count in items.items():
+    print(f"{count} {item}")
