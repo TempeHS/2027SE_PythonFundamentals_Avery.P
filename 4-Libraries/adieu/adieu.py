@@ -1,3 +1,4 @@
+
 byes = {}
 while True:
     try:
@@ -7,8 +8,17 @@ while True:
         print()
         break
 print("Adieu, adieu, to ", end="")
+lon = len(byes)
 for bye in byes:
-    print(bye, end=", ")
+    if lon > 2:
+        print(bye, end=", ")
+        lon -= 1
+    elif lon == 2:
+        print(bye, end=" and ")
+        lon -= 1
+    elif lon == 1:
+        print(bye, end="")
+        lon -= 1
 
 
 print()
