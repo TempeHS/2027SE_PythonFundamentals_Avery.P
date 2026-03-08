@@ -11,6 +11,6 @@ response = requests.get(
 
 o = response.json()
 for result in o["results"]:
-    print(result["trackname"])
+    print(result["trackName"])
 
 # print(json.dumps(response.json()))
