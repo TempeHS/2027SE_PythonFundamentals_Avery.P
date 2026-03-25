@@ -1,16 +1,28 @@
 import sys
-if sys.argv > 2:
-    print("Too Many Arguments")
-    sys.exit
-elif sys.argv < 2:
-    print("Too Few Arguments")
-    sys.exit
+
+if len(sys.argv) > 2:
+    sys.exit("Too Many Arguments")
+elif len(sys.argv) < 2:
+    sys.exit("Too Few Arguments")
 else:
-    filen = sys.argv
+    fileName = sys.argv[1]
 
 
-try:
-    with open()
-except FileNotFoundError:
-    print("File Does Not Exist!")
-    sys.exit
+if fileName.endswith(".py"):
+    try:
+        with open(fileName) as file:
+            counter = 0
+            for line in file:
+                sline = line.lstrip()
+                if not sline:
+                    continue
+                if sline.startswith("#"):
+                    continue
+                counter += 1
+    except FileNotFoundError:
+        sys.exit("File Does Not Exist!")
+else:
+    sys.exit("Doesn't end with .py")
+
+
+print(f"Lines of code is: {counter}")
